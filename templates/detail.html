@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1
+style="{% if todo.status == 'd' %} 
+            color: green; 
+        {% elif todo.status == 'i' %} 
+            color: yellow; 
+        {% else %} 
+            color: red; 
+        {% endif %}">
+        {{todo.title}}
+</h1>
+
+<p>{{todo.body}}</p>
+<p>{{todo.deadline}}</p>
+
+
+{% endblock %}
